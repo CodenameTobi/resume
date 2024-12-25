@@ -1,7 +1,7 @@
 /* Fonts */
 :root {
-    --text-color: rgb(33, 33, 129);
-    --sidebar-bg-color: rgb(106, 130, 138);
+    --text-color: rgb(12, 53, 10);
+    --sidebar-bg-color: rgba(21, 122, 25, 0.326);
 }
 
 /* Family */
@@ -17,6 +17,12 @@ h2 {
 h3 {
     /* Accountant */
     font-family: "Open Sans", sans-serif;
+}
+
+.name {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: "Archivo Narrow", sans-serif;
 }
 
 .jobPosition span,
