@@ -181,9 +181,9 @@ page[size="A4"] {
     height: 4cm;
     margin-bottom: 0.2cm;
     border-radius: 50%;
-    border: 0.15cm solid rgba(255, 255, 255, 0.707);
+    border: 0.15cm solid rgba(255, 255, 255, 0.744);
     object-fit: cover;
-    object-position: 45% 20%;
+    object-position: 40% 18%;
     box-shadow: 0 0 0.2cm rgba(0, 0, 0, 0.5);
 }
 
