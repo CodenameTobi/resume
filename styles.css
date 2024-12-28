@@ -7,7 +7,7 @@
     /* Highlight colors */
     --primary-accent: rgb(215, 156, 46);
     --secondary-accent: rgb(255, 179, 225);
-    
+
     /* Opacity colors */
     --main-bg-color-opacity: rgba(0, 0, 0, 0.3);
     --main-bg-color-strong-opacity: rgba(0, 0, 0, 0.5);
@@ -34,6 +34,12 @@ img {
     /* box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5); */
 }
 
+h1,
+h2,
+h3 {
+    color: var(--secondary-bg-color);
+}
+
 .bolded {
     font-weight: bold;
     font-size: 1.1em;
@@ -49,13 +55,14 @@ img {
 }
 #main-section {
     position: relative;
-    top: 80px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 #footer-section {
     width: 100%;
     position: relative;
     z-index: 1000;
-    bottom: -73px;
+    bottom: -100px;
     background-color: var(--secondary-bg-color);
     color: var(--secondary-text-color);
 }
@@ -208,17 +215,101 @@ img {
 }
 
 .interest-grid-item {
-    width: 100%;
-    height: 100%;
+    width: 20vw;
+    height: 20vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* overflow: hidden; */
+    user-select: none;
 }
 .interest-grid-item > img {
     width: 100%;
-    height: 90%;
+    height: 100%;
     border-radius: 10px;
     object-fit: cover;
     object-position: 50% 50%;
     box-shadow: 0 0 10px 2px var(--main-bg-color-opacity);
+    transition: opacity 0.5s ease;
 }
-.interest-grid-item > img:hover {
-    box-shadow: 0 0 10px 2px var(--primary-accent-strong-opacity);
+.interest-grid-item .interest-on-hover {
+    position: absolute;
+    opacity: 0;
+    color: var(--secondary-bg-color);
+    font-weight: bold;
+    font-size: clamp(1rem, 3.5vw, 2.5rem);
+    transition: opacity 0.5s ease;
+}
+.interest-grid-item:hover > img {
+    opacity: 0.3;
+    /* box-shadow: 0 0 10px 2px var(--primary-accent-strong-opacity); */
+}
+
+.interest-grid-item:hover .interest-on-hover {
+    opacity: 1;
+}
+
+.skill-list {
+    list-style: none;
+    text-align: left;
+    user-select: none;
+}
+
+.skill-list-item {
+    /* background-color: var(--primary-accent-opacity); */
+    margin: 20px 20vw;
+    min-width: 200px;
+    padding: 10px 14px;
+    align-items: center;
+    justify-content: left;
+    box-shadow: 0 0 10px 2px var(--main-bg-color-opacity);
+    overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+    .skill-list-item {
+        margin: 20px 0;
+    }
+}
+
+.skill-list-item:hover {
+    box-shadow: 0 0 10px 2px var(--main-bg-color-strong-opacity);
+}
+
+.skill-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    color: var(--secondary-bg-color);
+    /* border: 1px solid black; */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.skill-description {
+    color: var(--muted-text-color);
+    height: 0;
+    overflow: hidden;
+}
+
+.skill-description.show {
+    height: fit-content;
+}
+
+.skill-bar {
+    height: 10px;
+    width: 100%;
+    margin: 10px 0;
+    background-color: var(--secondary-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+.skill-bar .skill-bar-fill {
+    height: 10px;
+    margin: 10px 0;
+    width: 50%;
+    background-color: var(--primary-accent);
+    border-radius: 10px;
 }

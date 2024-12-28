@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect</title>
+    <style>
+        .hover-div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            transition: opacity 0.3s ease;
+        }
+
+        .hover-div span {
+            position: absolute;
+            opacity: 0;
+            color: white;
+            font-size: 12px;
+            transition: opacity 0.3s ease;
+        }
+
+        .hover-div:hover {
+            opacity: 0.5;
+        }
+
+        .hover-div:hover span {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="hover-div">
+        <span>Text</span>
+    </div>
+</body>
+</html>

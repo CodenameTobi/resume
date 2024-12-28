@@ -9,3 +9,7 @@ function updateFooterYear() {
     var footerYear = document.getElementById('current-year-span')
     footerYear.textContent = currentYear;
 }
+
+function toggleSkillDescription() {
+    
+}
