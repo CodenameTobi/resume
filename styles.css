@@ -129,6 +129,7 @@ h3 {
     color: var(--secondary-text-color);
     font-weight: bold;
     box-shadow: 0 0 10px 5px var(--primary-accent-opacity);
+    user-select: none;
 }
 
 .timeline-item .content {
