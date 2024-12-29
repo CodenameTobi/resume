@@ -138,6 +138,7 @@ h3 {
     display: flex;
     flex-direction: row;
     width: 100%;
+    max-width: 900px;
 }
 .content:hover {
     box-shadow: 0 0 10px 5px var(--main-bg-color-strong-opacity);
@@ -172,7 +173,9 @@ h3 {
     padding: 10px;
     height: auto;
 }
-
+#date {
+    color: var(--primary-accent);
+}
 @media (max-width: 768px) {
     .timeline-item {
         flex-direction: column;
@@ -262,6 +265,7 @@ h3 {
     /* background-color: var(--primary-accent-opacity); */
     margin: 20px 20vw;
     min-width: 200px;
+    max-width: 800px;
     padding: 10px 14px;
     align-items: center;
     justify-content: left;
